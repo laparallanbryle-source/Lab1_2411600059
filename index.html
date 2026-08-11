@@ -1,17 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 1</title>
+    <title>Document</title>
 </head>
 <body>
-    <h1>Welcome to My First HTML Page!</h1>
+    <header>
+        <h1>Allan Bryle E. Lapar</h1>
+        <p>This website is for my portfolio about skills and projects that i have done.<p>
 
-    <p><strong>Name:</strong> Allan Bryle E. Lapar</p>
+        
+    </header>
 
-    <p><strong>Student ID:</strong> 2411600059</p>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <p>This page is running using XAMPP and Visual Studio Code.</p>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p> I am Currently Third-year student pursuing bachelor of science in information technology at Ramon Magsaysay Memorial Colleges.
+                i have a strong Passion for web development and technology. I am eager to expand my knwoledge in these field and aspire to contribute meaningfully to the technology idustry in the future.</p>
+        </section>
+
+        <section id="skills">
+            <h2>My Skills</h2>
+            <ul>
+                <li>HTML- Web page structure and semantic HTML</li>
+                <li>CSS- Styling and layouts, responsive design</li>
+                <li>JavaScript- Basic programming, DOM manipulation, and interactivity</li>
+                <li>XAMPP- Local Web development environment</li>
+                <li>Visual Studio Code- Integrated development environment for coding</li>
+                
+
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <article class="project-card">
+                <h3>Mark 50</h3>
+                <p>Used this suit against Thanos</p>
+            </article>
+            <article class="project-card">
+                <h3>Vibranium shield</h3>
+                <p>shield for captain america</p>
+            </article>
+            <article class="project-card">
+                <h3>Nanotechnology</h3>
+                <p>For faster experiment results</p>
+            </article>
+        </section>
+    </main>
+
+    <aside>
+        <h2>Quick Facts</h2>
+        <p><strong>Course:</strong> BSIT</p>
+        <p><strong>Favorite Suit:</strong> Mark 50</p>
+        <p><strong>Fun Fact:</strong> This suit is made up of nanotechnology thats why this suit i won against thanos to save the world</p>
+    </aside>
+
+    <footer id="contact">
+        <p>&copy; 2026 Allan Bryle E. Lapar. All rights reserved.</p>
+        <p>Email: brylelapar@gmail.com | GitHub: github.com/laparallanbryle-source</p>
+        <p>Last updated: August 11, 2026</p>
+    </footer>
+
 </body>
 </html>
