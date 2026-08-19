@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F5F3FC;
+    color: #211A38;
+    font-family: Arial, sans-serif;
+}
+
+.list-group-item.active {
+    background-color: #6D57D6 !important;
+    border-color: #6D57D6 !important;
+}
+
+.list-group-item:hover {
+    background-color: #EDE6FA;
+    cursor: pointer;
+}
+
+.card {
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.shadow {
+    box-shadow: 0 4px 12px rgba(109, 87, 214, 0.2) !important;
+}
