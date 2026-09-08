@@ -20,6 +20,16 @@
         </div>
     </nav>
 
+    <!-- Toast Notification (Lab 4: real-time update notification) -->
+    <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 9999;">
+        <div id="updateToast" class="toast align-items-center text-white border-0" style="background-color: #6D57D6;" role="alert">
+            <div class="d-flex">
+                <div class="toast-body" id="toastMessage">Update!</div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+            </div>
+        </div>
+    </div>
+
     <div class="container-fluid">
         <div class="row">
 
@@ -70,43 +80,80 @@
                     </div>
                 </div>
 
+                <div id="alertSection" class="mb-3"></div>
+
+                <h4 class="mt-4">Grades Overview</h4>
+                <div class="row mb-4">
+                    <div class="col-md-4 mb-3">
+                        <div class="card shadow p-3">
+                            <h6>Units by Category</h6>
+                            <canvas id="categoryChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card shadow p-3">
+                            <h6>Grade Status Distribution</h6>
+                            <canvas id="statusChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card shadow p-3">
+                            <h6>Top 5 Courses by Units</h6>
+                            <canvas id="topCoursesChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
                 <h4 class="mt-4">My Grades</h4>
+
+                <input type="text" id="searchInput" class="form-control mb-3" placeholder="Search courses by name...">
+
+                <div class="row mb-3 g-2 align-items-end">
+                    <div class="col-md-3">
+                        <label class="form-label small">Category</label>
+                        <select id="categoryFilter" class="form-select">
+                            <option value="all">All Categories</option>
+                            <option value="Major">Major</option>
+                            <option value="GenEd">GenEd</option>
+                            <option value="Elective">Elective</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label small">Status</label>
+                        <select id="statusFilter" class="form-select">
+                            <option value="all">All Status</option>
+                            <option value="Passed">Passed</option>
+                            <option value="Failed">Failed</option>
+                            <option value="In Progress">In Progress</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label small">Min Units</label>
+                        <input type="number" id="minUnits" class="form-control" placeholder="Min" min="0">
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label small">Max Units</label>
+                        <input type="number" id="maxUnits" class="form-control" placeholder="Max" min="0">
+                    </div>
+                    <div class="col-md-2">
+                        <button id="exportBtn" class="btn btn-outline-secondary w-100">Export CSV</button>
+                    </div>
+                </div>
+
                 <table class="table table-striped shadow">
                     <thead>
                         <tr>
                             <th>Subject</th>
+                            <th>Category</th>
                             <th>Grade</th>
+                            <th>Units</th>
                             <th>Status</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>Web Systems and Technologies</td>
-                            <td>1.25</td>
-                            <td><span class="badge bg-success">Passed</span></td>
-                        </tr>
-                        <tr>
-                            <td>Advanced Database Systems</td>
-                            <td>1.50</td>
-                            <td><span class="badge bg-success">Passed</span></td>
-                        </tr>
-                        <tr>
-                            <td>System Analysis and Design</td>
-                            <td>2.00</td>
-                            <td><span class="badge bg-success">Passed</span></td>
-                        </tr>
-                        <tr>
-                            <td>System Integration and Architecture</td>
-                            <td>3.00</td>
-                            <td><span class="badge bg-danger">Failed</span></td>
-                        </tr>
+                    <tbody id="gradesTableBody">
+                       
                     </tbody>
                 </table>
-
-                <h4 class="mt-4">Grades Overview</h4>
-                <div style="max-width: 600px;">
-                    <canvas id="gradesChart"></canvas>
-                </div>
 
                 <footer class="mt-4 text-muted small">
                     &copy; 2026 Student Portal. Logged in as Allan Bryle E. Lapar.
@@ -117,6 +164,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/dataManager.js"></script>
     <script src="js/dashboard.js"></script>
 
 </body>

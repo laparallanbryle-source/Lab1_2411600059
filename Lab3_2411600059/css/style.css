@@ -1,31 +1,22 @@
-* {
-    box-sizing: border-box;
+#searchInput:focus,
+.form-select:focus {
+    border-color: #6D57D6;
+    box-shadow: 0 0 0 0.2rem rgba(109, 87, 214, 0.25);
 }
 
-body {
-    background-color: #F5F3FC;
-    color: #211A38;
-    font-family: Arial, sans-serif;
+#exportBtn {
+    transition: background-color 0.2s ease;
 }
 
-.list-group-item.active {
-    background-color: #6D57D6 !important;
-    border-color: #6D57D6 !important;
+#exportBtn:hover {
+    background-color: #6D57D6;
+    color: white;
 }
 
-.list-group-item:hover {
-    background-color: #EDE6FA;
-    cursor: pointer;
+.table-warning {
+    transition: background-color 0.3s ease;
 }
 
-.card {
-    transition: transform 0.2s ease;
-}
-
-.card:hover {
-    transform: translateY(-4px);
-}
-
-.shadow {
-    box-shadow: 0 4px 12px rgba(109, 87, 214, 0.2) !important;
+#alertSection .alert {
+    border-left: 5px solid #C161D6;
 }

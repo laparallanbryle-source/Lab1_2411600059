@@ -1,0 +1,12 @@
+[
+    { "id": 1, "name": "Web Systems and Technologies", "category": "Major", "grade": 1.25, "units": 3, "status": "Passed" },
+    { "id": 2, "name": "Advanced Database Systems", "category": "Major", "grade": 1.50, "units": 3, "status": "Passed" },
+    { "id": 3, "name": "System Analysis and Design", "category": "Major", "grade": 2.00, "units": 3, "status": "Passed" },
+    { "id": 4, "name": "System Integration and Architecture", "category": "Major", "grade": 3.00, "units": 3, "status": "Failed" },
+    { "id": 5, "name": "Networking Fundamentals", "category": "Major", "grade": 2.75, "units": 3, "status": "Passed" },
+    { "id": 6, "name": "Data Structures and Algorithms", "category": "Major", "grade": 1.75, "units": 3, "status": "Passed" },
+    { "id": 7, "name": "Physical Education 4", "category": "GenEd", "grade": 1.00, "units": 2, "status": "Passed" },
+    { "id": 8, "name": "Rizal's Life and Works", "category": "GenEd", "grade": 1.50, "units": 3, "status": "Passed" },
+    { "id": 9, "name": "Technopreneurship", "category": "Elective", "grade": 0, "units": 3, "status": "In Progress" },
+    { "id": 10, "name": "Capstone Project 1", "category": "Major", "grade": 0, "units": 3, "status": "In Progress" }
+]
